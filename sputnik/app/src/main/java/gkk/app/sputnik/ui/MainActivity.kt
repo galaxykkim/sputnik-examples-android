@@ -25,7 +25,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import gkk.app.sputnik.common.Screen
 import gkk.app.sputnik.common.TextStyles
 import gkk.app.sputnik.ui.screen.home.HomeScreen
-import gkk.app.sputnik.ui.screen.livedata.ExampleLiveDataScreen
+import gkk.app.sputnik.ui.screen.livedata.ExLiveDataScreen
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
@@ -36,8 +36,10 @@ class MainActivity : ComponentActivity() {
             Scaffold(
                 modifier = Modifier.fillMaxSize(),
             ) { innerPadding ->
-                Column(modifier = Modifier.fillMaxSize()
-                    .padding(WindowInsets.statusBars.asPaddingValues())
+                Column(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(WindowInsets.statusBars.asPaddingValues()),
                 ) {
                     TopBar()
                     MainScreen()
@@ -53,10 +55,9 @@ fun MainScreen() {
 
     NavHost(navController, startDestination = Screen.HOME) {
         composable(Screen.HOME) { HomeScreen(navController) }
-        composable(Screen.EXAMPLE_LIVEDATA) { ExampleLiveDataScreen(navController) }
+        composable(Screen.EXAMPLE_LIVEDATA) { ExLiveDataScreen(navController) }
     }
 }
-
 
 @Composable
 fun TopBar() {
