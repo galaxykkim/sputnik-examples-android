@@ -25,7 +25,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import gkk.app.sputnik.common.Screen
 import gkk.app.sputnik.common.TextStyles
 import gkk.app.sputnik.ui.screen.home.HomeScreen
-import gkk.app.sputnik.ui.screen.livedata.ExLiveDataScreen
+import gkk.app.sputnik.ui.screen.exstateflow.ExLiveDataScreen
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
